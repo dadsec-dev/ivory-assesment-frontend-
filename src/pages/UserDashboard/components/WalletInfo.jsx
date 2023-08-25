@@ -9,7 +9,7 @@ const WalletInfo = () => {
     useEffect(() => {
         const fetchWalletAddress = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/wallet/${slug}`);
+                const response = await axios.get(`https://bc-iv.onrender.com/wallet/${slug}`);
                 setWalletAddress(response.data.walletAddress);
             } catch (error) {
                 console.error("Error fetching wallet address:", error);

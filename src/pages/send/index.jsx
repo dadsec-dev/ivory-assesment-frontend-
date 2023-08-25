@@ -10,7 +10,7 @@ const SendTokens = ({ senderSlug }) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/sendTokens', {
+            const response = await axios.post('https://bc-iv.onrender.com/sendTokens', {
                 senderSlug,
                 recipientSlug,
                 amount

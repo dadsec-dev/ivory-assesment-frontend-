@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import { useParams } from 'react-router-dom';
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'https://bc-iv.onrender.com';
 
 const AdminDashboard = () => {
     // const { slug } = useParams();
@@ -28,7 +28,7 @@ const AdminDashboard = () => {
             // Convert the boolean is_active to a corresponding string "enabled" or "disabled"
             const statusString = is_active ? "enabled" : "disabled";
           
-            const response = await fetch("http://localhost:5000/admin/toggle-user-status", {
+            const response = await fetch("https://bc-iv.onrender.com/admin/toggle-user-status", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

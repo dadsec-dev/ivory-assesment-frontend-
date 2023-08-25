@@ -1,50 +1,4 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
 
-// const SendTokens = ({ senderSlug }) => {
-//     const [recipientWalletAddress, setRecipientWalletAddress] = useState('');
-//     const [amount, setAmount] = useState('');
-//     const [message, setMessage] = useState('');
-
-//     const handleSend = async (e) => {
-//         e.preventDefault();
-
-//         try {
-//             const response = await axios.post('http://localhost:5000/sendTokens', {
-//                 senderSlug, // Keeping this as slug, assuming sender is still identified by slug
-//                 recipientWalletAddress, // This should now be the wallet address of the recipient
-//                 amount
-//             });
-
-//             setMessage(response.data);
-//         } catch (error) {
-//             console.error("Error sending tokens:", error);
-//             setMessage("Failed to send tokens.");
-//         }
-//     };
-
-//     return (
-//         <div>
-//             <h2>Send Tokens</h2>
-//             <form onSubmit={handleSend}>
-//                 <div>
-//                     <label>Recipient's Wallet Address:</label>
-//                     <input type="text" value={recipientWalletAddress} onChange={e => setRecipientWalletAddress(e.target.value)} required />
-//                 </div>
-//                 <div>
-//                     <label>Amount:</label>
-//                     <input type="number" value={amount} onChange={e => setAmount(e.target.value)} required />
-//                 </div>
-//                 <div>
-//                     <button type="submit">Send</button>
-//                 </div>
-//             </form>
-//             {message && <p>{message}</p>}
-//         </div>
-//     );
-// };
-
-// export default SendTokens;
 
 
 import React, { useState } from 'react';
@@ -59,7 +13,7 @@ const SendTokens = ({ senderSlug }) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/sendTokens', {
+            const response = await axios.post('https://bc-iv.onrender.com/sendTokens', {
                 senderSlug,
                 recipientWalletAddress,
                 amount

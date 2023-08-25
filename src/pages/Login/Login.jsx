@@ -1,77 +1,3 @@
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
-
-// axios.defaults.baseURL = 'http://localhost:5000';
-
-// const Login = () => {
-//     const navigate = useNavigate();
-
-//     const [formData, setFormData] = useState({
-//         email: '',
-//         password: ''
-//     });
-
-//     const handleInputChange = (event) => {
-//         const { name, value } = event.target;
-
-//         setFormData(prevState => ({
-//             ...prevState,
-//             [name]: value
-//         }));
-//     };
-
-//     const handleSubmit = async (event) => {
-//         event.preventDefault();
-
-//         try {
-//             const response = await axios.post('/login', formData);
-
-//             if (response.data && response.data.slug) {
-//                 // Navigate to the user's unique dashboard using the returned slug.
-//                 navigate(`/userDashboard/${response.data.slug}`);
-//             } else {
-//                 alert('Error logging in. Please try again.');
-//             }
-//         } catch (error) {
-//             console.error("Error logging in:", error);
-//             alert('Error logging in. Please try again.');
-//         }
-//     };
-
-//     return (
-//         <div>
-//             <h1>Login</h1>
-//             <form onSubmit={handleSubmit}>
-//                 <div>
-//                     <label>Email:</label>
-//                     <input
-//                         type="email"
-//                         name="email"
-//                         value={formData.email}
-//                         onChange={handleInputChange}
-//                         required
-//                     />
-//                 </div>
-//                 <div>
-//                     <label>Password:</label>
-//                     <input
-//                         type="password"
-//                         name="password"
-//                         value={formData.password}
-//                         onChange={handleInputChange}
-//                         required
-//                     />
-//                 </div>
-//                 <div>
-//                     <button type="submit">Login</button>
-//                 </div>
-//             </form>
-//         </div>
-//     );
-// };
-
-// export default Login;
 
 
 import React, { useState } from 'react';
@@ -80,7 +6,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'https://bc-iv.onrender.com';
 
 const Login = () => {
     const navigate = useNavigate();

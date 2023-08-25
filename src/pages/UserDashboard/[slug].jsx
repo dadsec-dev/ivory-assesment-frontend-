@@ -1,49 +1,4 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios'; // Assuming you use axios for HTTP requests
-// import DepositForm from './components/DepositForm';
-// import TransactionHistory from './components/TransactionHistory';
-// import TransferForm from './components/TransferForm';
-// import WalletInfo from './components/WalletInfo';
-// import WithdrawForm from './components/WithdrawForm';
-// import { useParams } from 'react-router-dom';
 
-
-// axios.defaults.baseURL = 'http://localhost:5000';
-
-// const UserDashboard = () => {
-//   const [balance, setBalance] = useState(0);
-//   const { slug } = useParams();
-
-  
-//   useEffect(() => {
-//     // Fetch the user's balance when the component mounts
-//     const fetchBalance = async () => {
-//       try {
-//         const response = await axios.get(`/user/balance/${slug}`);
-//         setBalance(response.data.balance);
-//       } catch (error) {
-//         console.error("Error fetching balance:", error);
-//       }
-//     };
-
-//     fetchBalance();
-//   }, [slug]);
-
-//   return (
-//     <div>
-//         <h1>Welcome to Your Dashboard</h1>
-//         <h2>Your Current Balance: ${balance}</h2>
-
-//         <DepositForm />
-//         <TransactionHistory />
-//        <TransferForm senderSlug={slug} />
-//         <WalletInfo />
-//         <WithdrawForm />
-//     </div>
-//   );
-// }
-
-// export default UserDashboard;
 
 
 import React, { useState, useEffect } from 'react';
@@ -57,7 +12,7 @@ import { useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'https://bc-iv.onrender.com';
 
 const UserDashboard = () => {
   const [balance, setBalance] = useState(0);
