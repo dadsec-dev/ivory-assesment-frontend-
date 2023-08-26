@@ -14,7 +14,7 @@ const Invite = () => {
       toast.success('Email invite sent successfully. Check your email!');
     } catch(error) {
       toast.error('Error sending invitation.');
-      console.error('Error:', error);
+      console.error('Error:', error);//error here
     }
   };
 
